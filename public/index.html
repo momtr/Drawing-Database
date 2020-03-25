@@ -4,52 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corona App</title>
-    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lalezar|Nunito+Sans:400,700,900|Open+Sans:400,600,700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
 
     <header>
         <h1>
-            Corona App
+            DrawingAI
         </h1>
     </header>
     <main>
         <div class="explanation">
            <h3>
-               Wie funktioniert's?
+               How does it work?
            </h3>
            <div class="description">
-               TEst
+               You will see one word. Please be creative and try to make a drawing according to that word :)
            </div>
         </div>
-        <div class="contact">
-            <form action="contact" method="post">
-                Vorname*<br>
-                <input type="text" id="firstname" name="firstname"><br>
-                Nachname*<br>
-                <input type="text" id="lastname" name="lastname"><br>
-                Straße*<br>
-                <input type="text" id="strasse" name="strasse"><br>
-                Hausnummer*<br>
-                <input type="text" id="hausnummer" name="hausnummer"><br>
-                Postleitzahl (Wien)*<br>
-                <input type="number" id="postleitzahl" name="postleitzahl"><br>
-                Phone Number*<br> 
-                <input type="number" id="phone" name="phone"><br>
-                Email Address<br>
-                <input type="email" id="email" name="email"><br>
-                <input type="submit">
-            </form>
-        </div>
     </main>
+
+    <div id="time">
+        loading..
+    </div>
+    <div id="sketch">
+    </div>
+    <div class="align-container">
+        <button id="next" onclick="savePainting()">
+            next
+        </button>
+    </div>
 
     <footer>
         <a href="#">Cookie Policy</a>, 
         <a href="#">Haftungsbesfhränkung</a>, 
         <a href="#">Impressum</a> 
         <br>
-        &copy; 2020 Mitterdorfer - Corona App
+        &copy; 2020 Mitterdorfer - DrawingAI
     </footer>
 
     
