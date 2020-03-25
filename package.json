@@ -1,0 +1,16 @@
+{
+  "name": "corona-app",
+  "version": "1.0.0",
+  "description": "This is a template for a Node.js WebApp. It uses the NPM libraray `express` for the server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Moritz Mitterdorfer",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
