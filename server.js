@@ -34,7 +34,7 @@ app.post('/saveDrawing', (req, res) => {
     // we get a drawing
     let data = req.body.data;
     let drawing = data.drawing;
-    if(drawing.length > 0) {
+    if(true || drawing.length > 0) {
         let drawingSize = data.drawingSize;
         let word = data.word;
         let drawingUUID = uuid(20);
