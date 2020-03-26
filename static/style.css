@@ -42,7 +42,7 @@ main .explanation {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 900;
     color: #fed766;
-    font-size: 200%;
+    font-size: 100%;
 }
 
 .align-container {
@@ -55,7 +55,7 @@ main .explanation {
     background-color: #fed766;
     color: white;
     margin-top: 10px;
-    font-size: 100%;
+    font-size: 70%;
     padding: 10px 30px;
     border: 0;
     border-radius: 12px;
