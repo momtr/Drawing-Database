@@ -11,6 +11,14 @@ const client = new Client({
 
 client.connect();
 
+client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+    if (err) throw err;
+    for (let row of res.rows) {
+      console.log(JSON.stringify(row));
+    }
+    client.end();
+  });
+
 // get words from text file
 let words;
 fs.readFile('words.txt', 'utf8', (err, data) => {
