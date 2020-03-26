@@ -28,10 +28,9 @@ function preload() {
 }
 
 function setup() {
-    //drawingSize = (innerWidth > 500 ? 500 : innerWidth);
+    drawingSize = (innerWidth > 500 ? 500 : innerWidth);
     let margin = (innerWidth - drawingSize) / 2 + "px";
-    //canvas = createCanvas(drawingSize, drawingSize);
-    canvas = createCanvas(innerWidth, innerWidth);
+    canvas = createCanvas(drawingSize, drawingSize);
     canvas.mousePressed(startDrawing);
     canvas.mouseReleased(endDrawing);
     canvas.parent('sketch');
