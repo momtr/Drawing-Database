@@ -1,15 +1,12 @@
 const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
+const Datastore = require('nedb');
 const fs = require('fs');
-const Client = require('pg');
 
-const client = new Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: true
-});
-
-client.connect();
+// set up database
+const database = new Datastore('database.db');
+database.loadDatabase();
 
 // get words from text file
 let words;
