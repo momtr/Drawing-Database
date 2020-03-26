@@ -1,7 +1,8 @@
 // DrawingAI
 
 // host
-const host = "http://127.0.0.1:3000";
+//const host = "http://127.0.0.1:3000";
+const host = "drawing-ai.herokuapp.com";
 endpoint = en => host + "/" + en;
 
 
