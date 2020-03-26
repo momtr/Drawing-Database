@@ -19,7 +19,13 @@ client.query('SELECT table_schema,table_name FROM information_schema.tables;', (
     client.end();
   });
 
-  client.query('CREATE TABLE Drawings ( id char(30) primary key, entryData varchar(10000) );');
+  client.query('CREATE TABLE Drawings ( id char(30) primary key, entryData varchar(10000) );',(err, res) => {
+    if (err) throw err;
+    for (let row of res.rows) {
+      console.log(JSON.stringify(row));
+    }
+    client.end();
+  });
 
 // get words from text file
 let words;
