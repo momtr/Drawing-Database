@@ -11,7 +11,7 @@ const client = new Client({
 
 client.connect();
 
-client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+client.query('SELECT * FROM Drawings;', (err, res) => {
     if (err) throw err;
     for (let row of res.rows) {
       console.log(JSON.stringify(row));
@@ -19,13 +19,6 @@ client.query('SELECT table_schema,table_name FROM information_schema.tables;', (
     client.end();
   });
 
-  client.query('CREATE TABLE Drawings ( id char(30) primary key, entryData varchar(10000) );',(err, res) => {
-    if (err) throw err;
-    for (let row of res.rows) {
-      console.log(JSON.stringify(row));
-    }
-    client.end();
-  });
 
 // get words from text file
 let words;
