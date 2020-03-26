@@ -19,6 +19,8 @@ client.query('SELECT table_schema,table_name FROM information_schema.tables;', (
     client.end();
   });
 
+  client.query('CREATE TABLE Drawings ( id char(30) primary key, entryData varchar(10000) );');
+
 // get words from text file
 let words;
 fs.readFile('words.txt', 'utf8', (err, data) => {
