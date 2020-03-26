@@ -44,6 +44,7 @@ app.post('/saveDrawing', (req, res) => {
             drawingUUID, word, drawingSize, drawing, time
         });
         console.log("Hey! New drawing :) -> " + word);
+        console.log(data.touches);
         // send next word back
         res.send(JSON.stringify({
             word: getRandomWord(),

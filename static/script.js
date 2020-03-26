@@ -90,7 +90,7 @@ function savePainting() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            data: { drawing, drawingSize, word, time }
+            data: { drawing, drawingSize, word, time, touches }
         })
     })
         .then(res => {
