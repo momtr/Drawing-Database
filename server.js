@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const Client = require('pg');
+const { Client } = require('pg');
 
 const client = new Client({
     connectionString: process.env.DATABASE_URL,
-    ssl: true
-});
+    ssl: true,
+  });
 
 client.connect();
 
