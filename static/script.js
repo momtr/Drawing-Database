@@ -3,7 +3,8 @@
 // host
 //const host = "http://127.0.0.1:3000";
 const host = "drawing-ai.herokuapp.com";
-endpoint = en => host + "/" + en;
+//endpoint = en => host + "/" + en;
+endpoint = en => "/" + en;
 
 
 let word;
