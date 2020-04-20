@@ -2,23 +2,12 @@ const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const { Client } = require('pg');
 
-const client = new Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: true,
-  });
+// database (database.db file)
+const Datastore = require('nedb')
+let db = new Datastore({ filename: 'database.db' });
 
-client.connect();
-
-client.query('SELECT * FROM information_schema.tables.Drawings;', (err, res) => {
-    if (err) throw err;
-    for (let row of res.rows) {
-      console.log(JSON.stringify(row));
-    }
-    client.end();
-  });
-
+db.loadDatabase(err => { if(err) throw err });
 
 // get words from text file
 let words;
@@ -52,7 +41,7 @@ app.post('/saveDrawing', (req, res) => {
         let drawingUUID = uuid(20);
         let time = data.time;
         // save drawing in db
-        database.insert({
+        db.insert({
             drawingUUID, word, drawingSize, drawing, time
         });
         console.log("Hey! New drawing :) -> " + word);
